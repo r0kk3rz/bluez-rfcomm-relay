@@ -1,0 +1,12 @@
+[Unit]
+Description=BT RFCOMM Relay for UART
+Requires=bluetooth.target
+After=network.target
+User=root
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/bluez5-rfcomm-relay/main.py
+
+[Install]
+WantedBy=multi-user.target
